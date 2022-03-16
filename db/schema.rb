@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_16_161543) do
+ActiveRecord::Schema.define(version: 2022_03_16_162029) do
 
   create_table "gardens", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2022_03_16_161543) do
     t.string "banner_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "garden_id"
+    t.index ["garden_id"], name: "index_plants_on_garden_id"
   end
 
+  add_foreign_key "plants", "gardens"
 end

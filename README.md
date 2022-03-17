@@ -14,3 +14,7 @@ We’re going to create an app to create plants associated to a garden, and dest
 ## Frontend setup
 
 Follow [front-end](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) setup guidelines but don’t bother with the Bootstrap JS part
+
+# Gardens and plants II 🌴
+
+Let’s add tags on our plants and play around a little bit with JS in Rails!

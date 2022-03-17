@@ -1,5 +1,17 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @garden.banner_url %>');">
+<div class="banner" 
+     style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @garden.banner_url %>');">
   <div class="container">
     <h1 class="text-center"><%= @garden.name %></h1>
   </div>
 </div>
+<div class="container">
+  <div class="cards" >
+    <% @plants.each do |plant| %>
+      <div class="card-category mt-3" 
+          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=plant.banner_url%>)">
+        <%= plant.name %> 
+      </div>
+    <%end%>
+  </div>
+</div> 
+

@@ -13,5 +13,11 @@
       </div>
     <%end%>
   </div>
-</div> 
+  <h2>Ajouter une plante</h2>
+  <%= simple_form_for [@garden,@plant] do |f| %>
+    <%= f.input :name, label: false, input_html: {placeholder: "Name"} %>
+    <%= f.input :banner_url, label: false, input_html: {placeholder: "URL"} %>
+    <%= f.button :submit, {class: "btn btn-primary"}%>
+  <% end %>
+</div>  
 
